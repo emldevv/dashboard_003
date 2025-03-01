@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Load scripts.js after the page loads -->
+    <script src="scripts.js" defer></script>
+    <style>
+        /* Basic styling for readability */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #clock { font-size: 24px; }
+        #current-weather { margin: 20px 0; }
+        canvas { max-width: 800px; margin: 20px auto; display: block; }
+    </style>
+</head>
+<body>
+    <h1>Weather Dashboard for Sutherland, NSW</h1>
+    
+    <!-- Clock display -->
+    <div id="clock"></div>
+    
+    <!-- Current weather display -->
+    <div id="current-weather">
+        <h2>Current Weather</h2>
+        <p>Temperature: <span id="temperature"></span> °C</p>
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Precipitation: <span id="precipitation"></span> mm</p>
+    </div>
+    
+    <!-- Historical temperatures chart -->
+    <h2>Historical Temperatures Today</h2>
+    <canvas id="historical-chart"></canvas>
+    
+    <!-- Hourly forecast chart -->
+    <h2>Hourly Forecast</h2>
+    <canvas id="forecast-chart"></canvas>
+</body>
+</html>
